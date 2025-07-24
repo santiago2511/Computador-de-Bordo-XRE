@@ -1,134 +1,120 @@
-Painel Computador de Bordo para XRE300 - Funcionalidades Detalhadas
-1. Monitoramento e Exibição de Dados
-1.1. Velocidade
-Exibição da velocidade atual da moto em tempo real no painel.
+# **Painel Computador de Bordo para XRE300**
 
-Pode ser calculada usando um sensor de velocidade conectado ao sistema (sensor de roda ou GPS).
+Este projeto visa criar um sistema de painel computador de bordo para a moto **Honda XRE300**. O sistema fornece informações em tempo real sobre o desempenho e estado da moto, incluindo velocidade, nível de combustível, temperatura do motor, entre outros. O painel também oferece funcionalidades de controle remoto, manutenção preventiva, e cálculos de gasto de combustível.
 
-1.2. Nível de Combustível
-Monitoramento do nível de combustível da moto.
+## **Funcionalidades Principais**
 
-Alerta quando o nível de combustível estiver abaixo de um valor definido, indicando que é hora de abastecer.
+### **1. Monitoramento e Exibição de Dados**
+- **Velocidade**: Exibição em tempo real da velocidade da moto.
+- **Nível de Combustível**: Indicador do nível de combustível com alertas para baixo nível.
+- **Temperatura do Motor**: Monitoramento da temperatura do motor e alertas de superaquecimento.
+- **Consumo de Combustível**: Cálculo de consumo de combustível por quilômetro.
 
-1.3. Temperatura do Motor
-Exibição da temperatura atual do motor.
+### **2. Cálculo de Gasto de Combustível**
+- **Gasto Semanal**: Cálculo do gasto de combustível semanal com gráficos e históricos diários.
+- **Gasto Mensal**: Estimativa de gasto mensal e visualização do desempenho ao longo do mês.
+- **Histórico de Gasto**: Relatórios detalhados de consumo em períodos anteriores.
 
-Alerta quando a temperatura atingir níveis críticos, indicando risco de superaquecimento.
+### **3. Controle do Motor**
+- **Ligar o Motor via Aplicativo Móvel**: Funcionalidade de ligar/desligar o motor remotamente.
+- **Aquecimento e Lubrificação do Motor**: Programação para ligar o motor automaticamente em um horário definido para aquecer e lubrificar.
+- **Ligar o Motor em Horário Programado**: Programação para ligar o motor automaticamente a uma hora específica.
 
-1.4. Consumo de Combustível
-Calcula o consumo de combustível por quilômetro em tempo real.
+### **4. Manutenção e Manutenção Preventiva**
+- **Alertas de Manutenção**: Notificações sobre manutenções necessárias com base em tempo de uso ou quilometragem.
+- **Manutenção Preventiva**: Sugestões de manutenções periódicas para prolongar a vida útil da moto.
+- **Histórico de Manutenção**: Registro completo das manutenções realizadas, com data e tipo de serviço.
 
-Estima o consumo de combustível para a viagem com base na velocidade média e no estilo de pilotagem.
+### **5. Alertas e Diagnóstico**
+- **Alertas de Problemas**: Notificações sobre qualquer parâmetro fora do padrão (ex: temperatura alta, nível de combustível baixo).
+- **Diagnóstico Automático**: Verificação do status dos sensores e componentes da moto, com relatórios de falhas.
 
-2. Cálculo de Gasto de Combustível (Semana, Mês e Períodos Anteriores)
-2.1. Gasto de Combustível Semanal
-Calcula automaticamente o gasto de combustível da moto ao longo da semana com base nas distâncias percorridas.
+---
 
-Histórico de consumo por dia da semana.
+## **Funcionalidades do Aplicativo Móvel**
+O aplicativo móvel complementa o sistema, oferecendo controle e monitoramento remoto da moto. As funcionalidades incluem:
+- Ligar/desligar o motor remotamente.
+- Agendar horário de partida para aquecimento.
+- Monitorar o nível de combustível, consumo e temperatura.
+- Receber alertas de falhas ou necessidade de manutenção.
+- Consultar histórico de manutenções e diagnósticos.
 
-2.2. Gasto de Combustível Mensal
-Calcula o gasto de combustível mensal, com gráficos que mostram o desempenho ao longo do mês.
+---
 
-Estima o total gasto com base nos dados históricos de consumo de combustível e distância percorrida.
+## **Estrutura de Hardware**
 
-2.3. Gasto de Combustível de Períodos Anteriores
-Funcionalidade para consultar o histórico de consumo de combustível de períodos anteriores.
+### **1. Componentes Principais**
+- **ESP32**: Placa de desenvolvimento responsável pela comunicação entre sensores, motor e painel.
+- **Sensores**:
+  - **Sensor de Velocidade**: Para medir a velocidade da moto.
+  - **Sensor de Combustível**: Para monitorar o nível de combustível.
+  - **Sensor de Temperatura**: Para medir a temperatura do motor.
+  - **Sensor de Pressão dos Pneus** (opcional): Para verificar a pressão dos pneus.
+- **Display LCD/OLED**: Exibição das informações no painel da moto.
+- **Módulo Bluetooth/Wi-Fi**: Para comunicação com o aplicativo móvel e controle remoto.
 
-Visualização de relatórios com o total gasto por mês e por semana durante diferentes períodos.
+---
 
-3. Funções do Motor
-3.1. Ligar o Motor por Aplicativo Móvel
-O usuário pode ligar e desligar o motor remotamente por meio de um aplicativo móvel (via Bluetooth ou Wi-Fi).
+## **Instalação e Configuração**
 
-Isso pode ser útil para dar partida na moto sem precisar estar fisicamente próximo.
+### **Requisitos**
+- **Placa ESP32**.
+- **Sensores**: Velocidade, combustível, temperatura e pressão dos pneus (opcional).
+- **Display LCD ou OLED**.
+- **Arduino IDE** instalado.
+- **Bibliotecas** do ESP32 e do display no Arduino IDE.
 
-3.2. Ligar o Motor para Aquecer e Lubrificar Antes da Saída
-A moto pode ser programada para ligar automaticamente em um horário específico, permitindo que o motor seja aquecido e lubrificado antes de ser pilotado.
+### **Passos para Instalação**
+1. **Configuração do Ambiente**:
+   - Baixe e instale o **Arduino IDE**.
+   - Adicione a placa **ESP32** no Arduino IDE.
+   
+2. **Conectar os Sensores**:
+   - Conecte os sensores de velocidade, combustível e temperatura à placa ESP32.
+   - Conecte o display LCD ou OLED para exibição das informações.
 
-Isso ajuda a reduzir o desgaste do motor e a melhorar o desempenho inicial da moto.
+3. **Carregar o Código**:
+   - Abra o código fonte no Arduino IDE.
+   - Selecione a placa **ESP32** e carregue o código para o dispositivo.
 
-A função pode ser ativada através do aplicativo móvel, onde o usuário define a hora e o tempo de aquecimento.
+4. **Configuração do Aplicativo Móvel**:
+   - Desenvolva o aplicativo móvel para controle via Bluetooth ou Wi-Fi.
+   - O aplicativo pode ser desenvolvido em **Flutter**, **React Native**, ou outras tecnologias de sua preferência.
 
-3.3. Ligar o Motor em Horário Programado
-O motor pode ser programado para ligar em horários específicos, sem a necessidade de interação manual. Por exemplo, você pode programar o motor para ligar 10 minutos antes de sair de casa.
+---
 
-O controle de tempo pode ser feito diretamente no aplicativo, configurando o horário desejado para ligar o motor.
+## **Prototipagem**
 
-4. Funções de Manutenção e Manutenção Preventiva
-4.1. Notificação de Manutenção
-O sistema alerta quando é necessário realizar manutenção na moto (como troca de óleo, revisão do sistema de freios, etc.), com base no tempo de uso ou na quilometragem atingida.
+### **Prototipo do Painel**
+A seguir, temos uma imagem do protótipo do painel, mostrando a interface gráfica de como as informações serão exibidas na tela LCD/OLED.
 
-A notificação pode ser enviada por meio do aplicativo móvel ou exibida no painel de bordo da moto.
+<img width="1024" height="1024" alt="ChatGPT Image 24 de jul  de 2025, 20_34_40" src="https://github.com/user-attachments/assets/866eb16e-b81e-45d4-badd-a875aa2d9204" />
 
-4.2. Manutenção Preventiva
-O sistema pode sugerir manutenções preventivas periódicas, como troca de óleo, verificação de pneus, calibragem, etc.
 
-Baseado nos parâmetros de desempenho da moto e no histórico de manutenções anteriores, o sistema pode sugerir ações para melhorar o desempenho e prolongar a vida útil da moto.
+### **Animação de Inicialização**
+A animação de inicialização foi projetada para dar uma experiência interativa e moderna, exibindo as informações iniciais do painel enquanto o sistema está sendo carregado.
 
-4.3. Histórico de Manutenção
-O sistema mantém um registro completo de todas as manutenções realizadas, com datas e tipos de manutenção executados.
 
-O usuário pode consultar o histórico a qualquer momento, facilitando a organização e controle das manutenções.
 
-5. Função de Alerta e Diagnóstico
-5.1. Alertas de Problemas no Sistema
-O painel computador de bordo emitirá alertas caso algum parâmetro importante esteja fora do intervalo seguro. Por exemplo:
+---
 
-Se a temperatura do motor estiver alta demais.
+## **Contribuindo para o Projeto**
 
-Se o nível de combustível estiver muito baixo.
+Se você deseja contribuir para o projeto, siga os seguintes passos:
 
-Se a pressão dos pneus estiver abaixo do ideal.
+1. **Faça um fork** deste repositório para sua conta.
+2. **Crie uma branch** com suas melhorias ou correções.
+3. **Submeta um pull request** explicando as alterações feitas.
 
-5.2. Diagnóstico de Sistema
-O sistema pode realizar diagnósticos automáticos para verificar se todos os sensores e componentes estão funcionando corretamente.
+---
 
-Em caso de falha, o painel fornecerá um relatório e indicará quais peças ou sistemas precisam ser verificados ou substituídos.
+## **Licença**
 
-6. Aplicativo Móvel
-O aplicativo móvel permitirá que o usuário interaja remotamente com o sistema de monitoramento e controle da moto. Algumas das funcionalidades incluirão:
+Este projeto é licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-Ligar/desligar o motor remotamente.
+---
 
-Agendar horário de partida para o aquecimento do motor.
+## **Contato**
 
-Exibir status do combustível e consumo.
-
-Histórico de manutenção e alertas sobre manutenções preventivas.
-
-Alertas de falhas no sistema.
-
-Relatórios de consumo de combustível semanal e mensal.
-
-O aplicativo pode ser desenvolvido usando Flutter, React Native, ou outras tecnologias que permitam a integração via Bluetooth ou Wi-Fi com o ESP32.
-
-7. Estrutura de Hardware
-ESP32: O coração do sistema, responsável por gerenciar a comunicação entre os sensores, o motor e o painel.
-
-Sensores:
-
-Sensor de Velocidade: Para medir a velocidade da moto.
-
-Sensor de Combustível: Para monitorar o nível de combustível.
-
-Sensor de Temperatura: Para monitorar a temperatura do motor.
-
-Sensor de Pressão dos Pneus (opcional): Para garantir que a pressão esteja correta.
-
-Display LCD/OLED: Para exibir informações como velocidade, nível de combustível, temperatura, etc.
-
-Módulo Bluetooth/Wi-Fi: Para comunicação com o aplicativo móvel e controle remoto.
-
-8. Contribuindo para o Projeto
-Se você deseja contribuir para o projeto, sinta-se à vontade para criar um fork do repositório e enviar um pull request. As melhorias mais comuns incluem:
-
-Adicionar novos sensores para monitoramento adicional.
-
-Melhorar o aplicativo móvel com mais funcionalidades.
-
-Otimizar o código para maior eficiência no uso de recursos do ESP32.
-
-Licença
-Este projeto é licenciado sob a Licença MIT - veja o arquivo LICENSE para mais detalhes.
-
-Com essas funcionalidades, o painel computador de bordo para a XRE300 será uma solução completa e inteligente, não apenas para monitorar a moto, mas também para otimizar o desempenho e garantir que a manutenção preventiva seja feita de forma eficiente.
+- **Autor**: Nivaldo Santiago
+- **E-mail**: nivaldo.santiago@exemplo.com
