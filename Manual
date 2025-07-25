@@ -1,1 +1,26 @@
+## **Instalação e Configuração**
 
+### **Requisitos**
+- **Placa ESP32**.
+- **Display OLED ou celular  **.
+- **Arduino IDE** instalado.
+- **Bibliotecas** do ESP32 e do display no Arduino IDE.
+
+### **Passos para Instalação**
+1. **Configuração do Ambiente**:
+   - Baixe e instale o **Arduino IDE**.
+   - Adicione a placa **ESP32** no Arduino IDE.
+   
+2. **Conectar os Sensores**:
+   - Conecte os sensores de velocidade, combustível e temperatura à placa ESP32.
+   - Conecte o display LCD ou OLED para exibição das informações.
+
+3. **Carregar o Código**:
+   - Abra o código fonte no Arduino IDE.
+   - Selecione a placa **ESP32** e carregue o código para o dispositivo.
+
+4. **Configuração do Aplicativo Móvel**:
+   - Desenvolva o aplicativo móvel para controle via Bluetooth ou Wi-Fi.
+   - O aplicativo pode ser desenvolvido em **Flutter**, **React Native**, ou outras tecnologias de sua preferência.
+
+---
