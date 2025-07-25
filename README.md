@@ -100,15 +100,6 @@ A animação de inicialização foi projetada para dar uma experiência interati
 https://github.com/user-attachments/assets/89d3f4c9-600c-428a-9179-f8f8e04b9448
 
 
----
-
-## **Contribuindo para o Projeto**
-
-Se você deseja contribuir para o projeto, siga os seguintes passos:
-
-1. **Faça um fork** deste repositório para sua conta.
-2. **Crie uma branch** com suas melhorias ou correções.
-3. **Submeta um pull request** explicando as alterações feitas.
 
 ---
 
@@ -121,4 +112,4 @@ Este projeto é licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE
 ## **Contato**
 
 - **Autor**: Nivaldo Santiago
-- **E-mail**: nivaldo.santiago@exemplo.com
+- **E-mail**: nivaldo.santiago@outlook.com.br
