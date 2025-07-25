@@ -1,6 +1,6 @@
 # **Painel Computador de Bordo para XRE300**
 
-Este projeto visa criar um sistema de painel computador de bordo para minha atual moto **Honda XRE300**. 
+Neste projeto criei um sistema de computador de bordo para minha atual moto **Honda XRE300**. 
 O sistema fornece informações em tempo real sobre o desempenho e estado da moto, incluindo velocidade, nível de combustível, temperatura do motor, gasto de combustivel instantaneo e previsto na semana e com base em dados historicos dos mesmos periodos.
 O painel também oferece funcionalidades de controle remoto, manutenção preventiva, e cálculos de gasto de combustível.
 
@@ -29,7 +29,7 @@ O painel também oferece funcionalidades de controle remoto, manutenção preven
 
 ### **5. Alertas e Diagnóstico**
 - **Alertas de Problemas**: Notificações sobre qualquer parâmetro fora do padrão (ex: temperatura alta, nível de combustível baixo).
-- **Diagnóstico Automático**: Verificação do status dos sensores e componentes da moto, com relatórios de falhas.
+- **Diagnóstico Automático**: Verificação do status dos sensores e componentes da moto, com relatórios de falhas em PDF.
 
 ---
 
@@ -47,13 +47,13 @@ O aplicativo móvel complementa o sistema, oferecendo controle e monitoramento r
 
 ### **1. Componentes Principais**
 - **ESP32**: Placa de desenvolvimento responsável pela comunicação entre sensores, motor e painel.
-- **Sensores nativos da moto acessados pelaintegração com o modulo**:
+- **Sensores nativos da moto acessados pela integração com o modulo**:
   - **Sensor de Velocidade**: Para medir a velocidade da moto.
   - **Sensor de Combustível**: Para monitorar o nível de combustível.
   - **Sensor de Temperatura**: Para medir a temperatura do motor.
-  - **Sensor de Pressão dos Pneus** (opcional): Para verificar a pressão dos pneus.
+
 - **Display atualmente uso o celular como display: Exibição das informações no painel da moto.
-- **Módulo Bluetooth/Wi-Fi**: Para comunicação com o aplicativo móvel e controle remoto.
+- **Módulo Bluetooth/Wi-Fi**: Para comunicação com o aplicativo móvel e modulo da moto
 
 ---
 
