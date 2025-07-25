@@ -62,7 +62,7 @@ O aplicativo móvel complementa o sistema, oferecendo controle e monitoramento r
 ## **Prototipagem**
 
 ### **Prototipo do Painel**
-A seguir, temos uma imagem do protótipo do painel, mostrando a interface gráfica de como as informações serão exibidas na tela LCD/OLED.
+A seguir, temos uma imagem do protótipo do painel, mostrando a interface gráfica de como as informações serão exibidas na tela do celular.
 
 <img width="1024" height="1024" alt="ChatGPT Image 24 de jul  de 2025, 20_34_40" src="https://github.com/user-attachments/assets/866eb16e-b81e-45d4-badd-a875aa2d9204" />
 
