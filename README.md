@@ -1,14 +1,16 @@
 # **Painel Computador de Bordo para XRE300**
 
-Este projeto visa criar um sistema de painel computador de bordo para a moto **Honda XRE300**. O sistema fornece informações em tempo real sobre o desempenho e estado da moto, incluindo velocidade, nível de combustível, temperatura do motor, entre outros. O painel também oferece funcionalidades de controle remoto, manutenção preventiva, e cálculos de gasto de combustível.
+Este projeto visa criar um sistema de painel computador de bordo para minha atual moto **Honda XRE300**. 
+O sistema fornece informações em tempo real sobre o desempenho e estado da moto, incluindo velocidade, nível de combustível, temperatura do motor, gasto de combustivel instantaneo e previsto na semana e com base em dados historicos dos mesmos periodos.
+O painel também oferece funcionalidades de controle remoto, manutenção preventiva, e cálculos de gasto de combustível.
 
 ## **Funcionalidades Principais**
 
 ### **1. Monitoramento e Exibição de Dados**
-- **Velocidade**: Exibição em tempo real da velocidade da moto.
+- **Velocidade**: Exibição em tempo real da velocidade da moto com base na roda ou GPS
 - **Nível de Combustível**: Indicador do nível de combustível com alertas para baixo nível.
-- **Temperatura do Motor**: Monitoramento da temperatura do motor e alertas de superaquecimento.
-- **Consumo de Combustível**: Cálculo de consumo de combustível por quilômetro.
+- **Temperatura do Motor**: Monitoramento da temperatura do motor e alertas de superaquecimento com dados do modulo.
+- **Consumo de Combustível**: Cálculo de consumo de combustível por quilômetro instantaneo.
 
 ### **2. Cálculo de Gasto de Combustível**
 - **Gasto Semanal**: Cálculo do gasto de combustível semanal com gráficos e históricos diários.
@@ -18,7 +20,7 @@ Este projeto visa criar um sistema de painel computador de bordo para a moto **H
 ### **3. Controle do Motor**
 - **Ligar o Motor via Aplicativo Móvel**: Funcionalidade de ligar/desligar o motor remotamente.
 - **Aquecimento e Lubrificação do Motor**: Programação para ligar o motor automaticamente em um horário definido para aquecer e lubrificar.
-- **Ligar o Motor em Horário Programado**: Programação para ligar o motor automaticamente a uma hora específica.
+
 
 ### **4. Manutenção e Manutenção Preventiva**
 - **Alertas de Manutenção**: Notificações sobre manutenções necessárias com base em tempo de uso ou quilometragem.
@@ -45,43 +47,17 @@ O aplicativo móvel complementa o sistema, oferecendo controle e monitoramento r
 
 ### **1. Componentes Principais**
 - **ESP32**: Placa de desenvolvimento responsável pela comunicação entre sensores, motor e painel.
-- **Sensores**:
+- **Sensores nativos da moto acessados pelaintegração com o modulo**:
   - **Sensor de Velocidade**: Para medir a velocidade da moto.
   - **Sensor de Combustível**: Para monitorar o nível de combustível.
   - **Sensor de Temperatura**: Para medir a temperatura do motor.
   - **Sensor de Pressão dos Pneus** (opcional): Para verificar a pressão dos pneus.
-- **Display LCD/OLED**: Exibição das informações no painel da moto.
+- **Display atualmente uso o celular como display: Exibição das informações no painel da moto.
 - **Módulo Bluetooth/Wi-Fi**: Para comunicação com o aplicativo móvel e controle remoto.
 
 ---
 
-## **Instalação e Configuração**
 
-### **Requisitos**
-- **Placa ESP32**.
-- **Sensores**: Velocidade, combustível, temperatura e pressão dos pneus (opcional).
-- **Display LCD ou OLED**.
-- **Arduino IDE** instalado.
-- **Bibliotecas** do ESP32 e do display no Arduino IDE.
-
-### **Passos para Instalação**
-1. **Configuração do Ambiente**:
-   - Baixe e instale o **Arduino IDE**.
-   - Adicione a placa **ESP32** no Arduino IDE.
-   
-2. **Conectar os Sensores**:
-   - Conecte os sensores de velocidade, combustível e temperatura à placa ESP32.
-   - Conecte o display LCD ou OLED para exibição das informações.
-
-3. **Carregar o Código**:
-   - Abra o código fonte no Arduino IDE.
-   - Selecione a placa **ESP32** e carregue o código para o dispositivo.
-
-4. **Configuração do Aplicativo Móvel**:
-   - Desenvolva o aplicativo móvel para controle via Bluetooth ou Wi-Fi.
-   - O aplicativo pode ser desenvolvido em **Flutter**, **React Native**, ou outras tecnologias de sua preferência.
-
----
 
 ## **Prototipagem**
 
