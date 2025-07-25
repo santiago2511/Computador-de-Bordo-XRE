@@ -96,6 +96,10 @@ A animação de inicialização foi projetada para dar uma experiência interati
 
 
 
+
+https://github.com/user-attachments/assets/89d3f4c9-600c-428a-9179-f8f8e04b9448
+
+
 ---
 
 ## **Contribuindo para o Projeto**
